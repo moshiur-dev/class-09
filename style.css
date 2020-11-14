@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.conatainer {
+    width: 80%;
+    margin: auto;
+}
+
+.header-area {
+    background-color: #000;
+    overflow: hidden;
+    padding: 20px 0;
+
+}
+
+.logo-area {
+    width: 30%;
+    float: left;
+    overflow: hidden;
+
+}
+
+.logo-area img {
+    width: 100%;
+}
+
+.menu-area {
+    width: 70%;
+    float: left;
+    margin-top: 35px;
+}
+
+.menu-area ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu-area ul li {
+    display: inline-block;
+
+
+}
+
+.menu-area ul li a {
+    padding: 10px 20px;
+    color: green;
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+}
+
+.menu-area ul li a::before {
+    background-color: red;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    opacity: 0;
+}
+
+.menu-area ul li a::after {
+    background-color: green;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    opacity: 0;
+}
+
+.menu-area ul li a:hover::before {
+    opacity: 1;
+    transition: 1s;
+}
+
+.menu-area ul li a:hover::after {
+    opacity: 1;
+    transition: 1s;
+}
+
+.box {
+    width: 60%;
+    height: 400px;
+    background: red;
+    margin: auto;
+    position: relative;
+}
+
+.box::before {
+    content: "";
+    height: 0;
+    width: 0;
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid transparent;
+    border-left: 200px solid green;
+    position: absolute;
+    top: 0;
+    right: -200px;
+}
+
+.box::after {
+    content: "";
+    height: 0;
+    width: 0;
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid transparent;
+    border-right: 200px solid green;
+    position: absolute;
+    top: 0;
+    left: -200px;
+}
